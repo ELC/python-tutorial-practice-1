@@ -14,8 +14,8 @@ repos:
     hooks:
       - id: python-use-type-annotations
 
-  - repo: https://gitlab.com/pycqa/flake8
-    rev: 3.9.2
+  - repo: https://github.com/pycqa/flake8
+    rev: 6.0.0
     hooks:
       - id: flake8
         args: ['--ignore=W503,W504,F401,E121,E123,E126,E133']
