@@ -35,14 +35,14 @@ def test_compute_quantity_zero_price(available_budget: float):
 
 
 @given(st.floats(max_value=0), st.floats())
-def test_compute_quantity_negative_price(price: float, available_budget: float):
+def test_compute_quantity_negative_price(price: float, available_budget: float):  # noqa: E501
     assume(price != 0)
     with pytest.raises(ValueError):
         compute_quantity(price, available_budget)
 
 
 @given(st.floats(), st.floats(max_value=0))
-def test_compute_quantity_negative_budget(price: float, available_budget: float):
+def test_compute_quantity_negative_budget(price: float, available_budget: float):  # noqa: E501
     assume(available_budget != 0)
     with pytest.raises(ValueError):
         compute_quantity(price, available_budget)
