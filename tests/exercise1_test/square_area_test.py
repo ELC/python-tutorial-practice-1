@@ -41,7 +41,9 @@ def test_square_area_negative(function: Callable[[float], float], side: float):
 
 @parametrized_functions
 @given(st.floats(min_value=0, max_value=2**32))
-def test_square_area_deterministic(function: Callable[[float], float], side: float):  # noqa: E501
+def test_square_area_deterministic(
+    function: Callable[[float], float], side: float
+):  # noqa: E501
     result = function(side)
     replicated_result = function(side)
 
